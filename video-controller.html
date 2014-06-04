@@ -1,0 +1,39 @@
+<head>
+  <title>Video Controller</title>
+</head>
+
+<body>
+  {{> video_remote}}
+</body>
+
+<template name="video_remote">
+	{{#if isRemote}}
+		{{> remote}}
+	{{else}}
+		{{> video}}
+	{{/if}}
+</template>
+
+<template name="video">
+  <h1>Video Controller</h1>
+	<video width="720" height="405" poster="soccer.jpg" >
+		<source src="soccer.mp4" type="video/mp4">
+		<source src="soccer.ogv" type="video/ogg">
+		Your browser does not support the video tag.
+	</video>
+	<br/><br/>
+	<div class="controller-url">
+		<strong>Controller URL</strong>
+		<div><a href="{{url}}#{{video.token}}" target="_blank">{{url}}#{{video.token}}</a></div>
+	</div>
+</template>
+
+
+<template name="remote">
+	<div class="remote playstate-{{playState}} mutestate-{{muteState}}">
+		<input class="pause" type="button" value="PAUSE">
+		<input class="play" type="button" value="PLAY">
+		<input class="mute" type="button" value="MUTE">
+		<input class="unmute" type="button" value="UNMUTE">
+	</div>
+</template>

@@ -1,0 +1,40 @@
+/* CSS declarations go here */
+
+body {
+	background-color: #222;
+	text-align: center;
+	color: gray;
+	font-family: "Verdana", sans-serif;
+	font-size: .9em;
+}
+
+.controller-url {
+	background-color: #FFFFFF;
+	border-radius: 6px;
+	display: inline-block;
+	padding: 14px 30px;
+}
+
+input {
+	background: gray;
+	width: 50%;
+	display: block;
+	box-sizing: border-box;
+	border: 1px solid white;
+	float: left;
+	height: 200px;
+	border-radius: 0;
+	font-size: 30px;
+	-webkit-appearance: none;
+}
+
+
+
+.remote.playstate-playing input.play,
+.remote.playstate-paused input.pause,
+.remote.playstate-stop input.pause,
+
+.remote.mutestate-muted input.mute,
+.remote.mutestate-unmuted input.unmute{
+	display: none;
+}
