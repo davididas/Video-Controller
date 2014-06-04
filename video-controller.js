@@ -33,7 +33,6 @@ if (Meteor.isClient)
   });
 	
 	
-	
 
 	Template.video_remote.isRemote = function() {
 		return !!window.location.hash; 
